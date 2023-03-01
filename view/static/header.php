@@ -27,7 +27,7 @@
             </svg>
           </button>
           <!-- Dropdown menu -->
-          <div class="hidden z-50 my-4 text-base list-none bg-gray-700 rounded divide-y divide-gray-600 shadow" id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="
+          <div class="hidden z-50 my-4 text-base list-none bg-gray-800 rounded divide-y divide-gray-600 shadow" id="user-dropdown" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="
                   position: absolute;
                   inset: 0px auto auto 0px;
                   margin: 0px;

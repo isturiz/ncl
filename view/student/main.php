@@ -66,7 +66,7 @@
         <td class="py-4 px-6"><?php //echo $row['apellido']; ?></td>
         <td class="py-4 px-6"><?php // $row['telefono']; ?></td>
         <td class="py-4 px-6"><?php //echo $row['correo']; ?></td>
-        <td class="py-4 px-6 text-right flex justify-between rounded-r-xl">
+        <td class="py-4 px-6 rounded-r-xl">
 
           <!-- Edit nuevo: oficial -->
           <button class="text-white-500 editButton" type="button" data-modal-toggle="editUserModal" onclick="editUser(
