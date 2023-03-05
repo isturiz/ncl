@@ -21,6 +21,9 @@
 
   <button type="button" data-modal-toggle="newUser" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-green-800">Nuevo estudiante</button>
 
+  <!-- Modal toggle -->
+
+
 
 </div>
 
@@ -43,40 +46,50 @@
 <table class="w-full text-sm text-left text-gray-400" id="table-file">
   <thead class="text-xs uppercase bg-gray-700 text-gray-400">
     <tr>
-      <th scope="col" class="py-3 px-6">Cedula</th>
+      <!-- <th scope="col" class="py-3 px-6">Cedula</th> -->
       <th scope="col" class="py-3 px-6">Nombre</th>
       <th scope="col" class="py-3 px-6">Apellido</th>
       <th scope="col" class="py-3 px-6">Telefono</th>
       <th scope="col" class="py-3 px-6">Correo</th>
+      <th scope="col" class="py-3 px-6">Representante</th>
       <th scope="col" class="py-3 px-6 text-center">Acción</th>
     </tr>
   </thead>
   <tbody class="">
 
     <?php
-    //require_once '../../controller/users/list.php';
-    //while ($row = mysqli_fetch_assoc($files)) {
+    require_once '../../controller/student/main.php';
+    while ($row = mysqli_fetch_assoc($student)) {
     ?>
 
       <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
-        <th scope="row" class="rounded-l-xl py-4 px-6 font-medium text-white whitespace-nowrap">
-          <?php //echo $row['cedula']; ?>
-        </th>
-        <td class="py-4 px-6"> test<?php //echo $row['nombre']; ?> </td>
-        <td class="py-4 px-6"><?php //echo $row['apellido']; ?></td>
-        <td class="py-4 px-6"><?php // $row['telefono']; ?></td>
-        <td class="py-4 px-6"><?php //echo $row['correo']; ?></td>
+        <!-- <th scope="row" class="rounded-l-xl py-4 px-6 font-medium text-white whitespace-nowrap">
+          <?php //echo $row['cedula']; 
+          ?>
+        </th> -->
+        <td class="py-4 px-6"><?php echo $row['nombre']; ?> </td>
+        <td class="py-4 px-6"><?php echo $row['apellido']; ?></td>
+        <td class="py-4 px-6"><?php echo $row['telefono']; ?></td>
+        <td class="py-4 px-6"><?php echo $row['correo']; ?></td>
+        <td class="py-4 px-6"><?php echo $row['Representante_idRepresentante']; ?></td>
         <td class="py-4 px-6 rounded-r-xl">
 
           <!-- Edit nuevo: oficial -->
           <button class="text-white-500 editButton" type="button" data-modal-toggle="editUserModal" onclick="editUser(
-                      '<?php //echo ($row['cedula']) ?>',
-                      '<?php //echo ($row['apellido']) ?>',
-                      '<?php //echo ($row['telefono']) ?>',
-                      '<?php //echo ($row['correo']) ?>',
-                      '<?php //echo ($row['nombre']) ?>',
-                      '<?php //echo ($row['contraseña']) ?>',
-                      '<?php //echo ($row['idNivelUsuario']) ?>'
+                      '<?php //echo ($row['cedula']) 
+                        ?>',
+                      '<?php //echo ($row['apellido']) 
+                        ?>',
+                      '<?php //echo ($row['telefono']) 
+                        ?>',
+                      '<?php //echo ($row['correo']) 
+                        ?>',
+                      '<?php //echo ($row['nombre']) 
+                        ?>',
+                      '<?php //echo ($row['contraseña']) 
+                        ?>',
+                      '<?php //echo ($row['idNivelUsuario']) 
+                        ?>'
 
                       )">
 
@@ -85,7 +98,8 @@
             </svg>
           </button>
 
-          <button class="text-red-500" type="button" data-modal-toggle="deleteAlert" targetEl="" onclick="deleteUser('<?php //echo ($row['cedula']) ?>')">
+          <button class="text-red-500" type="button" data-modal-toggle="deleteAlert" targetEl="" onclick="deleteUser('<?php //echo ($row['cedula']) 
+                                                                                                                      ?>')">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
             </svg>
@@ -93,23 +107,31 @@
         </td>
       </tr>
     <?php
-    //}
+    }
     ?>
 
+    <!-- Texto de buscar -->
     <tr class='noSearch hide'>
       <td colspan="5"></td>
     </tr>
   </tbody>
+
 </table>
 
-<?php //require_once('edit.php'); ?>
-<?php //require_once('new.php'); ?>
-<?php //require_once('../complementary/deleteAlert.php'); ?>
+
+
+
+
+
+<?php //require_once('edit.php');
+?>
+<?php require_once('new.php'); ?>
+<?php //require_once('../complementary/deleteAlert.php'); 
+?>
 
 
 <script src="../../js/search.js"></script>
-<script src="../../js/deleteAlert.js"></script>
-<script src="../../js/edit.js"></script>
+<!-- <script src="../../js/deleteAlert.js"></script> -->
+<!-- <script src="../../js/edit.js"></script> -->
 
 <?php require_once('../../view/static/bodyEnd.php'); ?>
-
