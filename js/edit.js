@@ -9,10 +9,6 @@ function editStudent(idStudent, firstName, lastName, email, address, birthdate, 
   let phoneInput = document.querySelector('#phoneEdit')
   let ageCategoryInput = document.querySelector('#ageCategoryEdit')
 
-
-  console.log(idStudent, firstName, lastName, email, address, birthdate, phone, ageCategory)
-
-  console.log(firstNameInput.value)
   idStudentInput.value    = idStudent
   firstNameInput.value    = firstName
   lastNameInput.value     = lastName

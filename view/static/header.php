@@ -11,8 +11,8 @@
           </button>
         </div>
 
-        <a href="/ncl/view/student/main.php" class="flex items-center">
-          <!-- <img src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/boy.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" /> -->
+        <a href="/ncl/view/home/main.php" class="flex items-center pl-10">
+          <img src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/boy.png" class="mr-3 h-6 sm:h-9" alt="NCL logo" />          
           <span class="self-center text-xl font-semibold whitespace-nowrap text-white">NCL</span>
         </a>
       </div>

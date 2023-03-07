@@ -47,10 +47,10 @@
   <thead class="text-xs uppercase bg-gray-700 text-gray-400">
     <tr>
       <!-- <th scope="col" class="py-3 px-6">Cedula</th> -->
-      <th scope="col" class="py-3 px-6">ID</th>
+      <th scope="col" class="hidden">ID</th>
       <th scope="col" class="py-3 px-6">Nombre</th>
       <th scope="col" class="py-3 px-6">Apellido</th>
-      <th scope="col" class="py-3 px-6">Telefono</th>
+      <th scope="col" class="py-3 px-6">Teléfono</th>
       <th scope="col" class="py-3 px-6">Correo</th>
       <th scope="col" class="py-3 px-6">Representante</th>
       <th scope="col" class="py-3 px-6 text-center">Acción</th>
@@ -68,12 +68,12 @@
           <?php //echo $row['cedula']; 
           ?>
         </th> -->
-        <td class="py-4 px-6"><?php echo $row['idEstudiante']; ?> </td>
-        <td class="py-4 px-6"><?php echo $row['nombre']; ?> </td>
-        <td class="py-4 px-6"><?php echo $row['apellido']; ?></td>
-        <td class="py-4 px-6"><?php echo $row['telefono']; ?></td>
-        <td class="py-4 px-6"><?php echo $row['correo']; ?></td>
-        <td class="py-4 px-6"><?php echo $row['Representante_idRepresentante']; ?></td>
+        <td class="hidden	"><?php echo $row['idEstudiante']; ?> </td>
+        <td class="py-4 px-6"><?php echo $row['nombre_estudiante']; ?> </td>
+        <td class="py-4 px-6"><?php echo $row['apellido_estudiante']; ?></td>
+        <td class="py-4 px-6"><?php echo $row['telefono_estudiante']; ?></td>
+        <td class="py-4 px-6"><?php echo $row['correo_estudiante']; ?></td>
+        <td class="py-4 px-6"><?php echo $row['nombre_representante'] . " " . $row['apellido_representante']; ?></td>
         <td class="py-4 px-6 rounded-r-xl">
 
           <!-- Edit nuevo: oficial -->
@@ -85,12 +85,12 @@
 
             onclick="editStudent(
                       '<?php echo ($row['idEstudiante']) ?>',
-                      '<?php echo ($row['nombre']) ?>',
-                      '<?php echo ($row['apellido']) ?>',
-                      '<?php echo ($row['correo']) ?>',
+                      '<?php echo ($row['nombre_estudiante']) ?>',
+                      '<?php echo ($row['apellido_estudiante']) ?>',
+                      '<?php echo ($row['correo_estudiante']) ?>',
                       '<?php echo ($row['direccion']) ?>',
                       '<?php echo ($row['fechaNacimiento']) ?>',
-                      '<?php echo ($row['telefono']) ?>',
+                      '<?php echo ($row['telefono_estudiante']) ?>',
                       '<?php echo ($row['categoriaEdad']) ?>'
                       )">
 
@@ -118,11 +118,6 @@
   </tbody>
 
 </table>
-
-
-
-
-
 
 <?php //require_once('edit.php');
 ?>
