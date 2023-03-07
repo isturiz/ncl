@@ -19,7 +19,7 @@
   </div>
 
 
-  <button type="button" data-modal-toggle="newUser" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-green-800">Nuevo estudiante</button>
+  <button type="button" data-modal-toggle="newStudent" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-1.5 bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-green-800">Nuevo estudiante</button>
 
   <!-- Modal toggle -->
 
@@ -47,6 +47,7 @@
   <thead class="text-xs uppercase bg-gray-700 text-gray-400">
     <tr>
       <!-- <th scope="col" class="py-3 px-6">Cedula</th> -->
+      <th scope="col" class="py-3 px-6">ID</th>
       <th scope="col" class="py-3 px-6">Nombre</th>
       <th scope="col" class="py-3 px-6">Apellido</th>
       <th scope="col" class="py-3 px-6">Telefono</th>
@@ -60,13 +61,14 @@
     <?php
     require_once '../../controller/student/main.php';
     while ($row = mysqli_fetch_assoc($student)) {
-    ?>
+    ?>    
 
       <tr class="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
         <!-- <th scope="row" class="rounded-l-xl py-4 px-6 font-medium text-white whitespace-nowrap">
           <?php //echo $row['cedula']; 
           ?>
         </th> -->
+        <td class="py-4 px-6"><?php echo $row['idEstudiante']; ?> </td>
         <td class="py-4 px-6"><?php echo $row['nombre']; ?> </td>
         <td class="py-4 px-6"><?php echo $row['apellido']; ?></td>
         <td class="py-4 px-6"><?php echo $row['telefono']; ?></td>
@@ -75,22 +77,21 @@
         <td class="py-4 px-6 rounded-r-xl">
 
           <!-- Edit nuevo: oficial -->
-          <button class="text-white-500 editButton" type="button" data-modal-toggle="editUserModal" onclick="editUser(
-                      '<?php //echo ($row['cedula']) 
-                        ?>',
-                      '<?php //echo ($row['apellido']) 
-                        ?>',
-                      '<?php //echo ($row['telefono']) 
-                        ?>',
-                      '<?php //echo ($row['correo']) 
-                        ?>',
-                      '<?php //echo ($row['nombre']) 
-                        ?>',
-                      '<?php //echo ($row['contraseña']) 
-                        ?>',
-                      '<?php //echo ($row['idNivelUsuario']) 
-                        ?>'
+          <button
+            class="text-white-500 editButton"
+            type="button"
 
+            data-modal-toggle="editStudentModal"
+
+            onclick="editStudent(
+                      '<?php echo ($row['idEstudiante']) ?>',
+                      '<?php echo ($row['nombre']) ?>',
+                      '<?php echo ($row['apellido']) ?>',
+                      '<?php echo ($row['correo']) ?>',
+                      '<?php echo ($row['direccion']) ?>',
+                      '<?php echo ($row['fechaNacimiento']) ?>',
+                      '<?php echo ($row['telefono']) ?>',
+                      '<?php echo ($row['categoriaEdad']) ?>'
                       )">
 
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -126,12 +127,13 @@
 <?php //require_once('edit.php');
 ?>
 <?php require_once('new.php'); ?>
+<?php require_once('edit.php'); ?>
 <?php //require_once('../complementary/deleteAlert.php'); 
 ?>
 
 
 <script src="../../js/search.js"></script>
 <!-- <script src="../../js/deleteAlert.js"></script> -->
-<!-- <script src="../../js/edit.js"></script> -->
+<script src="../../js/edit.js"></script>
 
 <?php require_once('../../view/static/bodyEnd.php'); ?>

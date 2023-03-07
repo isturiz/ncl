@@ -1,17 +1,23 @@
-function editStudent(id, nombre, apellido, telefono, correo, contraseña, nivelUsuario) {
-  let nombreInput = document.querySelector('#firstNameEdit')
-  let apellidoInput = document.querySelector('#lastNameEdit')
-  let telefonoInput = document.querySelector('#phoneEdit')
-  let cedulaInput = document.querySelector('#identificationCardEdit')
-  let correoInput = document.querySelector('#emailEdit')
-  let contraseñaInput = document.querySelector('#passwordEdit')
-  let nivelInput = document.querySelector('#userLevelEdit')
+function editStudent(idStudent, firstName, lastName, email, address, birthdate, phone, ageCategory) {
+  let firstNameInput = document.querySelector('#firstNameEdit')
+  let lastNameInput = document.querySelector('#lastNameEdit')
+  let emailInput = document.querySelector('#emailEdit')
+  let addressInput = document.querySelector('#addressEdit')
+  let birthdateInput = document.querySelector('#birthdateEdit')
+  let phoneInput = document.querySelector('#phoneEdit')
+  let ageCategoryInput = document.querySelector('#ageCategoryEdit')
 
-  nombreInput.value = nombre
-  apellidoInput.value = apellido
-  telefonoInput.value = telefono
-  cedulaInput.value = id
-  correoInput.value = correo
-  contraseñaInput.value = contraseña
-  nivelInput.value = nivelUsuario
+
+  console.log(idStudent, firstName, lastName, email, address, birthdate, phone, ageCategory)
+
+  console.log(firstNameInput.value)
+  // let idStudentInput
+  // idStudentInput.value    = idStudent
+  firstNameInput.value    = firstName
+lastNameInput.value       = lastName
+  emailInput.value        = email
+  addressInput.value      = address
+  birthdateInput.value    = birthdate
+  phoneInput.value        = phone
+  ageCategoryInput.value  = ageCategory
 }
