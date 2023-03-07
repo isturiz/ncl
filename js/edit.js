@@ -1,4 +1,6 @@
 function editStudent(idStudent, firstName, lastName, email, address, birthdate, phone, ageCategory) {
+
+  let idStudentInput = document.querySelector('#idStudentEdit')
   let firstNameInput = document.querySelector('#firstNameEdit')
   let lastNameInput = document.querySelector('#lastNameEdit')
   let emailInput = document.querySelector('#emailEdit')
@@ -11,10 +13,9 @@ function editStudent(idStudent, firstName, lastName, email, address, birthdate, 
   console.log(idStudent, firstName, lastName, email, address, birthdate, phone, ageCategory)
 
   console.log(firstNameInput.value)
-  // let idStudentInput
-  // idStudentInput.value    = idStudent
+  idStudentInput.value    = idStudent
   firstNameInput.value    = firstName
-lastNameInput.value       = lastName
+  lastNameInput.value     = lastName
   emailInput.value        = email
   addressInput.value      = address
   birthdateInput.value    = birthdate
