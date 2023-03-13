@@ -1,4 +1,4 @@
-function editStudent(idStudent, firstName, lastName, email, address, birthdate, phone, ageCategory) {
+function editStudent(idStudent, firstName, lastName, email, address, birthdate, phone, ageCategory, representative) {
 
   let idStudentInput = document.querySelector('#idStudentEdit')
   let firstNameInput = document.querySelector('#firstNameEdit')
@@ -8,13 +8,16 @@ function editStudent(idStudent, firstName, lastName, email, address, birthdate, 
   let birthdateInput = document.querySelector('#birthdateEdit')
   let phoneInput = document.querySelector('#phoneEdit')
   let ageCategoryInput = document.querySelector('#ageCategoryEdit')
+  let representativeInput = document.querySelector('#representativeEdit')
 
-  idStudentInput.value    = idStudent
-  firstNameInput.value    = firstName
-  lastNameInput.value     = lastName
-  emailInput.value        = email
-  addressInput.value      = address
-  birthdateInput.value    = birthdate
-  phoneInput.value        = phone
-  ageCategoryInput.value  = ageCategory
+  idStudentInput.value        = idStudent
+  firstNameInput.value        = firstName
+  lastNameInput.value         = lastName
+  emailInput.value            = email
+  addressInput.value          = address
+  birthdateInput.value        = birthdate
+  phoneInput.value            = phone
+  ageCategoryInput.value      = ageCategory
+  representativeInput.value   = representative
+
 }

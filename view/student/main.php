@@ -74,6 +74,7 @@
         <td class="py-4 px-6"><?php echo $row['telefono_estudiante']; ?></td>
         <td class="py-4 px-6"><?php echo $row['correo_estudiante']; ?></td>
         <td class="py-4 px-6"><?php echo $row['nombre_representante'] . " " . $row['apellido_representante']; ?></td>
+        <td class=""><?php echo $row['idRepresentante']; ?> </td>
         <td class="py-4 px-6 rounded-r-xl">
 
           <!-- Edit nuevo: oficial -->
@@ -91,7 +92,8 @@
                       '<?php echo ($row['direccion']) ?>',
                       '<?php echo ($row['fechaNacimiento']) ?>',
                       '<?php echo ($row['telefono_estudiante']) ?>',
-                      '<?php echo ($row['categoriaEdad']) ?>'
+                      '<?php echo ($row['categoriaEdad']) ?>',
+                      '<?php echo ($row['idRepresentante']) ?>'
                       )">
 
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
